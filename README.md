@@ -324,7 +324,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/benchmark_fps.py
 
 - **VisDrone Dataset:** see [VisDrone/VisDrone-Dataset](https://github.com/VisDrone/VisDrone-Dataset).
 - **Ultralytics YOLO:** AGPL-3.0.
-- **Assignment:** Aerial Guardian Challenge (Rachana).
+- **Assignment:** Aerial Guardian Challenge.
 
 ---
 
