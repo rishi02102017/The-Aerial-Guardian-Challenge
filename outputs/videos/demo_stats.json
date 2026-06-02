@@ -1,0 +1,10 @@
+[
+  {
+    "frames": 464,
+    "avg_ms": 6.2728447035248065,
+    "fps": 159.41730542732628,
+    "imgsz": 960,
+    "output": "outputs/videos/demo_uav0000086.mp4",
+    "sequence": "uav0000086_00000_v"
+  }
+]

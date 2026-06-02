@@ -1,0 +1,53 @@
+# Aerial Guardian — drone-oriented person detection + tracking
+
+project:
+  name: aerial_guardian
+  seed: 42
+
+classes:
+  # VisDrone category IDs mapped to single "person" class (index 0)
+  visdrone_person_ids: [1, 2]  # pedestrian, person
+  names: ["person"]
+
+data:
+  raw_dir: data/raw
+  yolo_dir: data/yolo
+  sequences_dir: data/raw/sequences
+
+detector:
+  base_weights: yolov8n.pt
+  imgsz: 1280          # training resolution
+  inference_imgsz: 960 # demo/benchmark (faster; still good for small persons)
+  conf: 0.15
+  iou: 0.45
+  max_det: 300
+  # Tiled inference for small objects (trade FPS for recall)
+  tiled_inference:
+    enabled: false  # enable for max recall; demo/benchmark use full-frame + GMC ByteTrack
+    tile_size: 640
+    overlap: 0.25
+
+tracker:
+  type: bytetrack
+  track_thresh: 0.25
+  match_thresh: 0.8
+  track_buffer: 45
+  frame_rate: 30
+
+visualization:
+  trail_length: 25
+  box_thickness: 2
+  font_scale: 0.6
+
+train:
+  epochs: 40
+  batch: 4
+  patience: 15
+  close_mosaic: 10
+  optimizer: AdamW
+  lr0: 0.001
+  device: 0
+
+benchmark:
+  warmup_frames: 30
+  measure_frames: 200

@@ -1,0 +1,19 @@
+{
+  "hardware": {
+    "platform": "Linux-6.9.1-1.el8.elrepo.x86_64-x86_64-with-glibc2.28",
+    "processor": "x86_64",
+    "gpus": [
+      "NVIDIA RTX A4000, 16376 MiB, 550.107.02",
+      "NVIDIA RTX A4000, 16376 MiB, 550.107.02"
+    ]
+  },
+  "weights": "outputs/models/best.pt",
+  "sequence": "uav0000086_00000_v",
+  "frames_measured": 200,
+  "warmup_frames": 30,
+  "imgsz": 960,
+  "train_imgsz": 1280,
+  "tiled": false,
+  "avg_latency_ms": 5.243,
+  "fps": 190.731
+}

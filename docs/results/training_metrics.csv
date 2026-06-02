@@ -1,0 +1,4 @@
+epoch,time_s,precision,recall,mAP50,mAP50-95,train_box_loss,train_cls_loss,val_box_loss
+1,52.0,0.620,0.418,0.487,0.184,2.115,1.692,2.581
+16,890.0,0.641,0.343,0.381,0.137,1.624,0.896,3.027
+best_checkpoint,890.0,0.619,0.418,0.488,0.184,NA,NA,NA

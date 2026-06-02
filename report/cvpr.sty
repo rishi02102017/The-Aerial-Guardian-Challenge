@@ -1,0 +1,61 @@
+% Minimal CVPR-style package for report compilation without external author kit.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvpr}[2024/03/30 Minimal CVPR style]
+
+\RequirePackage{times}
+\RequirePackage{eso-pic}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+\setlength{\textwidth}{6.875in}
+\setlength{\textheight}{8.875in}
+\setlength{\columnsep}{0.3125in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{0.5in}
+
+\def\@maketitle{
+  \vbox{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \centering
+    {\LARGE\bf \@title\par}
+    \vspace{0.5em}
+    {\large \@author\par}
+    \vspace{0.3em}
+    {\normalsize \@institution\par}
+    \vspace{1.0em}
+  }%
+}
+
+\newcommand{\institution}[1]{\def\@institution{#1}}
+\institution{}
+
+\def\cvprPaperID#1{\def\@cvprPaperID{#1}}
+\cvprPaperID{0000}
+
+\newcommand{\twocolumnabstract}[1]{%
+  \begin{center}
+  \begin{minipage}{0.9\textwidth}
+  \textbf{Abstract.} #1
+  \end{minipage}
+  \end{center}
+  \vspace{0.5em}
+}

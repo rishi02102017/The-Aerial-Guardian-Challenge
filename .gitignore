@@ -1,0 +1,28 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Dataset (user-provided; not redistributed)
+VisDrone2019-MOT-val/
+data/
+
+# Training caches and full run dirs (figures copied to docs/figures/)
+outputs/models/yolov8n_visdrone_person/
+outputs/models/train.log
+*.cache
+
+# IDE / tools
+wandb/
+runs/
+.idea/
+.vscode/
+
+# Downloaded base checkpoints (Ultralytics auto-fetch)
+yolov8n.pt
+yolo26n.pt
+configs/bytetrack_custom.yaml
+
+# Keep: outputs/models/best.pt, outputs/videos/*.mp4, docs/
