@@ -20,6 +20,12 @@ runs/
 .idea/
 .vscode/
 
+# Local Tectonic binary (not for git)
+tectonic
+
+# LaTeX report (maintained locally / Overleaf, not in repo)
+report/
+
 # Downloaded base checkpoints (Ultralytics auto-fetch)
 yolov8n.pt
 yolo26n.pt

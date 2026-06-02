@@ -4,8 +4,6 @@
 
 Repository: [github.com/rishi02102017/The-Aerial-Guardian-Challenge](https://github.com/rishi02102017/The-Aerial-Guardian-Challenge)
 
-Technical report (CVPR-style LaTeX): [`report/report.tex`](report/report.tex)
-
 ---
 
 ## 1. Problem Statement
@@ -309,16 +307,6 @@ CUDA_VISIBLE_DEVICES=0 python scripts/run_demo.py \
 CUDA_VISIBLE_DEVICES=0 python scripts/benchmark_fps.py
 ```
 
-### 8.4 LaTeX report
-
-```bash
-cd report && pdflatex report.tex && pdflatex report.tex
-```
-
-Produces `report/report.pdf` with all figures and tables.
-
----
-
 ## 9. Deliverables Checklist
 
 | Requirement | Location |
@@ -327,7 +315,7 @@ Produces `report/report.pdf` with all figures and tables.
 | Setup instructions | This README |
 | Fine-tuned weights | `outputs/models/best.pt` |
 | Output video | `outputs/videos/demo_uav0000086.mp4` |
-| Technical report | `report/report.tex` (compile to PDF) |
+| Results and figures | `docs/figures/`, `docs/results/` |
 | FPS + hardware | Section 5.5, `docs/results/fps_report.json` |
 
 ---
