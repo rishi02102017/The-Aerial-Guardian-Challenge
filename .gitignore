@@ -1,3 +1,6 @@
+# Secrets (never commit)
+.credentials/
+
 # Environment
 .venv/
 __pycache__/
